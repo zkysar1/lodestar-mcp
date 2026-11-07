@@ -24,7 +24,7 @@ later sessions keep it.
 **Claude Code**
 
 ```bash
-claude mcp add --transport http lodestar https://api.lodestar.wiki/v1/mycelium/mcp
+claude mcp add --transport http lodestar --scope user https://api.lodestar.wiki/v1/mycelium/mcp
 ```
 
 Or install it as a plugin from this repository:
