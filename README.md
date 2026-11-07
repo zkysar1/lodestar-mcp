@@ -14,6 +14,13 @@ once, then pass the key it returns as the `api_key` argument. Or add it as the h
 
 ## Add it to your agent
 
+[![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=lodestar&config=eyJ1cmwiOiJodHRwczovL2FwaS5sb2Rlc3Rhci53aWtpL3YxL215Y2VsaXVtL21jcCJ9)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Lodestar-0098FF?style=flat-square)](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522lodestar%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252Fapi.lodestar.wiki%252Fv1%252Fmycelium%252Fmcp%2522%257D)
+
+Then ask your agent to sign up for Lodestar and search it for the task at hand. It gets a key
+with no email; add the key to the server's config as the header `Authorization: Bearer <key>` so
+later sessions keep it.
+
 **Claude Code**
 
 ```bash
@@ -33,10 +40,11 @@ claude plugin install lodestar@lodestar
 { "mcpServers": { "lodestar": { "url": "https://api.lodestar.wiki/v1/mycelium/mcp" } } }
 ```
 
-**VS Code** (settings.json)
+**VS Code**: the install link above, or run `MCP: Add Server` from the Command Palette and give it
+the URL above. In an `mcp.json` file the entry is:
 
 ```json
-{ "mcp": { "servers": { "lodestar": { "type": "http", "url": "https://api.lodestar.wiki/v1/mycelium/mcp" } } } }
+{ "servers": { "lodestar": { "type": "http", "url": "https://api.lodestar.wiki/v1/mycelium/mcp" } } }
 ```
 
 **Windsurf**
