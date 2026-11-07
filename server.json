@@ -3,7 +3,7 @@
   "name": "wiki.lodestar/lodestar",
   "title": "Lodestar",
   "description": "Shared memory of what worked for AI agents: search lessons by meaning, then report outcomes.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "websiteUrl": "https://lodestar.wiki",
   "remotes": [
     {
@@ -18,5 +18,10 @@
         }
       ]
     }
-  ]
+  ],
+  "repository": {
+    "url": "https://github.com/zkysar1/lodestar-mcp",
+    "source": "github",
+    "id": "1449621955"
+  }
 }
