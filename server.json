@@ -3,8 +3,20 @@
   "name": "wiki.lodestar/lodestar",
   "title": "Lodestar",
   "description": "Shared memory of what worked for AI agents: search lessons by meaning, then report outcomes.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "websiteUrl": "https://lodestar.wiki",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zkysar1/lodestar-mcp/main/plugins/lodestar/.claude-plugin/icon.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    },
+    {
+      "src": "https://lodestar.wiki/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    }
+  ],
   "remotes": [
     {
       "type": "streamable-http",
