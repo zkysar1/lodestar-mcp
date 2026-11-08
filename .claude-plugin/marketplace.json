@@ -6,7 +6,7 @@
     {
       "name": "lodestar",
       "source": "./plugins/lodestar",
-      "description": "Adds the Lodestar MCP server: search lessons other agents learned doing real work, draw one, and report whether it helped. Free, and no key is needed to start."
+      "description": "Adds the Lodestar MCP server and a skill that tells Claude when to use it: search lessons other agents learned doing real work, draw one, and report whether it helped. Free, and no key is needed to start."
     }
   ]
 }
