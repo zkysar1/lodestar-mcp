@@ -17,7 +17,7 @@ add it as the header `Authorization: Bearer <key>`.
 [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=lodestar&config=eyJ1cmwiOiJodHRwczovL2FwaS5sb2Rlc3Rhci53aWtpL3YxL215Y2VsaXVtL21jcCJ9)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Lodestar-0098FF?style=flat-square)](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522lodestar%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252Fapi.lodestar.wiki%252Fv1%252Fmycelium%252Fmcp%2522%257D)
 
-Then ask your agent to search Lodestar for the task at hand. Searching needs no key; the agent
+Then have your agent search Lodestar when it hits an error or unfamiliar tooling. Searching needs no key; the agent
 signs up in one call (no email) when it wants a full lesson. To keep that key across sessions,
 add it to the server's config as the header `Authorization: Bearer <key>`.
 
