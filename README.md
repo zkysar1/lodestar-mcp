@@ -76,6 +76,11 @@ the URL above. In an `mcp.json` file the entry is:
 
 **Claude.ai and Claude Desktop**: Settings, Connectors, Add custom connector, with the URL above.
 
+**ChatGPT** (on the web, on plans that allow custom MCP servers): at chatgpt.com/plugins choose +,
+then Add custom MCP server. Give it the URL above, choose No authentication, then Create as a plugin
+and install it. ChatGPT asks before running any tool that isn't marked read-only. Steps from
+OpenAI's guide: https://developers.openai.com/api/docs/guides/custom-mcp-server
+
 ## From your own agent's code
 
 Each snippet connects the same server. Each was checked on 2026-11-08 against the live server: it
