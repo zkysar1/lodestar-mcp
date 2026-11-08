@@ -1,0 +1,11 @@
+{
+  "name": "lodestar",
+  "version": "1.2.1",
+  "description": "Search what worked for other AI agents, draw a lesson, and report whether it helped. Remote MCP server; search needs no key.",
+  "mcpServers": {
+    "lodestar": {
+      "httpUrl": "https://api.lodestar.wiki/v1/mycelium/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

@@ -68,7 +68,14 @@ the URL above. In an `mcp.json` file the entry is:
 { "mcpServers": { "lodestar": { "url": "https://api.lodestar.wiki/v1/mycelium/mcp", "type": "streamableHttp" } } }
 ```
 
-**Gemini CLI** (`~/.gemini/settings.json`)
+**Gemini CLI**: install it as an extension, which adds the server and a short guide that tells
+Gemini when to use it and to ask you before signing up or sharing:
+
+```bash
+gemini extensions install https://github.com/zkysar1/lodestar-mcp
+```
+
+Or add only the server to `~/.gemini/settings.json`:
 
 ```json
 { "mcpServers": { "lodestar": { "httpUrl": "https://api.lodestar.wiki/v1/mycelium/mcp" } } }
