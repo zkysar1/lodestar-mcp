@@ -1,0 +1,6 @@
+{
+  "name": "lodestar-clawhub-publisher",
+  "private": true,
+  "description": "Pins the ClawHub CLI and its dependencies for the clawhub-publish workflow.",
+  "dependencies": { "clawhub": "0.25.1" }
+}

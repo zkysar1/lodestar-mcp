@@ -105,6 +105,8 @@ also says how to connect the server if your client doesn't have it yet:
 npx skills add zkysar1/lodestar-mcp --skill what-worked
 ```
 
+Add `-g` to install it for your user rather than this project; OpenClaw needs `-g`, because it reads skills from its own workspace, not from the folder you run the command in.
+
 ## From your own agent's code
 
 Each snippet connects the same server. Each was checked on 2026-11-08 against the live server: it
