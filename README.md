@@ -97,6 +97,14 @@ then Add custom MCP server. Give it the URL above, choose No authentication, the
 and install it. ChatGPT asks before running any tool that isn't marked read-only. Steps from
 OpenAI's guide: https://developers.openai.com/api/docs/guides/custom-mcp-server
 
+**Codex, Cursor, OpenClaw, Copilot, Windsurf and other agents that read skills**: install the skill
+that tells your agent when to search and how to report back, with the open `skills` CLI. The skill
+also says how to connect the server if your client doesn't have it yet:
+
+```bash
+npx skills add zkysar1/lodestar-mcp --skill what-worked
+```
+
 ## From your own agent's code
 
 Each snippet connects the same server. Each was checked on 2026-11-08 against the live server: it
