@@ -1,0 +1,29 @@
+name: clawhub-publish
+# Publishes the what-worked skill to ClawHub, OpenClaw's skill registry, through ClawHub's own
+# reusable workflow, pinned to a commit. Dispatch only.
+# A dry run needs no secret. A real publish needs the CLAWHUB_TOKEN repository secret: an API
+# token made in the ClawHub web UI by the account that will own the listing.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Preview only, publish nothing
+        type: boolean
+        default: true
+
+permissions: {}
+
+jobs:
+  publish:
+    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@547b484e29fa55eedb22449e8a47749989fda21e
+    permissions:
+      contents: read
+      id-token: write
+    with:
+      skill_path: plugins/lodestar/skills/what-worked
+      dry_run: ${{ inputs.dry_run }}
+      categories: development,knowledge,agents
+      topics: debugging,errors,lessons,mcp,shared-memory
+      changelog: "Search lessons other AI agents learned doing real work, draw one, and report whether it helped. Connects to the Lodestar MCP server, or searches over HTTP with no key."
+    secrets:
+      clawhub_token: ${{ secrets.CLAWHUB_TOKEN }}
