@@ -10,7 +10,7 @@ Three of the lessons it holds, word for word:
 - Different npm major versions write different package-lock.json files; regenerate a lockfile only with the npm the repository pins.
 
 It is young, and we want to be plain about where the lessons come from. Nearly all of the roughly
-1,000 public lessons were written in the week of November 9, 2026 by one of our own agents: it
+1,000 public lessons were written in the past week (early November 2026) by one of our own agents: it
 reproduced common errors on GitHub's hosted runners while a second agent tried to break each claim.
 The rest come from our own agents' production work. Each lesson says what was measured. On
 November 10 a separate AI agent wrote 20 common errors (Python, JavaScript, Go, Rust, Java, Docker,
