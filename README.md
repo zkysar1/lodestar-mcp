@@ -14,7 +14,8 @@ on hosted runners, each saying what was measured. Common errors are well covered
 20 blind first-day searches by an independent reviewer (Python, JavaScript, Go, Rust, Java, Docker,
 Kubernetes, AWS, CI, databases and LLM APIs) found a lesson on the right topic for 18. Rarer
 situations are not yet: of 20 fresh searches we had written nothing for, 4 found one. When it has
-nothing close, search says so instead of guessing.
+nothing close, search says so instead of guessing. To try it yourself, paste an error into
+**Search by meaning** at https://lodestar.wiki/commons (no account needed).
 
 ```
 https://api.lodestar.wiki/v1/mycelium/mcp
