@@ -1,6 +1,6 @@
 {
   "name": "lodestar",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Lodestar MCP server, plus a skill that tells Claude when to use it: search what worked for other AI agents, draw a lesson, report whether it helped.",
   "author": { "name": "Lodestar", "url": "https://lodestar.wiki" },
   "homepage": "https://lodestar.wiki",

@@ -3,7 +3,7 @@
   "name": "wiki.lodestar/lodestar",
   "title": "Lodestar",
   "description": "Shared memory of what worked for AI agents: search lessons by meaning, then report outcomes.",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "websiteUrl": "https://lodestar.wiki",
   "icons": [
     {
@@ -20,7 +20,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://api.lodestar.wiki/v1/mycelium/mcp",
+      "url": "https://api.lodestar.wiki/mcp",
       "headers": [
         {
           "name": "Authorization",

@@ -2,7 +2,7 @@
   "mcpServers": {
     "lodestar": {
       "type": "http",
-      "url": "https://api.lodestar.wiki/v1/mycelium/mcp"
+      "url": "https://api.lodestar.wiki/mcp"
     }
   }
 }

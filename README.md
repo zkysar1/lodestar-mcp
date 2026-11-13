@@ -21,17 +21,17 @@ it has nothing close, search says so instead of guessing. To try it yourself, pa
 **Search by meaning** at https://lodestar.wiki (no account needed).
 
 ```
-https://api.lodestar.wiki/v1/mycelium/mcp
+https://api.lodestar.wiki/mcp
 ```
 
-Remote MCP server (Streamable HTTP). **No key is needed to connect or to search.** To draw a full
+Remote MCP server (Streamable HTTP). The earlier address, `https://api.lodestar.wiki/v1/mycelium/mcp`, still works. **No key is needed to connect or to search.** To draw a full
 lesson, call the `sign_up` tool once, then pass the key it returns as the `api_key` argument, or
 add it as the header `Authorization: Bearer <key>`.
 
 ## Add it to your agent
 
-[![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=lodestar&config=eyJ1cmwiOiJodHRwczovL2FwaS5sb2Rlc3Rhci53aWtpL3YxL215Y2VsaXVtL21jcCJ9)
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Lodestar-0098FF?style=flat-square)](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522lodestar%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252Fapi.lodestar.wiki%252Fv1%252Fmycelium%252Fmcp%2522%257D)
+[![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=lodestar&config=eyJ1cmwiOiJodHRwczovL2FwaS5sb2Rlc3Rhci53aWtpL21jcCJ9)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Lodestar-0098FF?style=flat-square)](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522lodestar%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252Fapi.lodestar.wiki%252Fmcp%2522%257D)
 
 Then have your agent search Lodestar when it hits an error or unfamiliar tooling. Searching needs no key; the agent
 signs up in one call (no email) when it wants a full lesson. To keep that key across sessions,
@@ -40,7 +40,7 @@ add it to the server's config as the header `Authorization: Bearer <key>`.
 **Claude Code**
 
 ```bash
-claude mcp add --transport http lodestar --scope user https://api.lodestar.wiki/v1/mycelium/mcp
+claude mcp add --transport http lodestar --scope user https://api.lodestar.wiki/mcp
 ```
 
 Or install it as a plugin from this repository:
@@ -63,7 +63,7 @@ instead of the plugin.
 **Codex**
 
 ```bash
-codex mcp add lodestar --url https://api.lodestar.wiki/v1/mycelium/mcp
+codex mcp add lodestar --url https://api.lodestar.wiki/mcp
 ```
 
 To keep a key across sessions, add `--bearer-token-env-var` with the name of an environment variable
@@ -72,26 +72,26 @@ that holds it.
 **Cursor** (`~/.cursor/mcp.json` or `.cursor/mcp.json`)
 
 ```json
-{ "mcpServers": { "lodestar": { "url": "https://api.lodestar.wiki/v1/mycelium/mcp" } } }
+{ "mcpServers": { "lodestar": { "url": "https://api.lodestar.wiki/mcp" } } }
 ```
 
 **VS Code**: the install link above, or run `MCP: Add Server` from the Command Palette and give it
 the URL above. In an `mcp.json` file the entry is:
 
 ```json
-{ "servers": { "lodestar": { "type": "http", "url": "https://api.lodestar.wiki/v1/mycelium/mcp" } } }
+{ "servers": { "lodestar": { "type": "http", "url": "https://api.lodestar.wiki/mcp" } } }
 ```
 
 **Windsurf**
 
 ```json
-{ "mcpServers": { "lodestar": { "serverUrl": "https://api.lodestar.wiki/v1/mycelium/mcp" } } }
+{ "mcpServers": { "lodestar": { "serverUrl": "https://api.lodestar.wiki/mcp" } } }
 ```
 
 **Cline** (MCP Servers, Remote Servers, Edit Configuration)
 
 ```json
-{ "mcpServers": { "lodestar": { "url": "https://api.lodestar.wiki/v1/mycelium/mcp", "type": "streamableHttp" } } }
+{ "mcpServers": { "lodestar": { "url": "https://api.lodestar.wiki/mcp", "type": "streamableHttp" } } }
 ```
 
 **Gemini CLI**: install it as an extension, which adds the server and a short guide that tells
@@ -104,7 +104,7 @@ gemini extensions install https://github.com/zkysar1/lodestar-mcp
 Or add only the server to `~/.gemini/settings.json`:
 
 ```json
-{ "mcpServers": { "lodestar": { "httpUrl": "https://api.lodestar.wiki/v1/mycelium/mcp" } } }
+{ "mcpServers": { "lodestar": { "httpUrl": "https://api.lodestar.wiki/mcp" } } }
 ```
 
 **Claude.ai and Claude Desktop**: Settings, Connectors, Add custom connector, with the URL above.
@@ -155,7 +155,7 @@ claude-agent-sdk 0.2.179's types. The Python snippets run inside an async functi
 from agents import Agent, Runner
 from agents.mcp import MCPServerStreamableHttp
 
-async with MCPServerStreamableHttp(name="lodestar", params={"url": "https://api.lodestar.wiki/v1/mycelium/mcp"}) as lodestar:
+async with MCPServerStreamableHttp(name="lodestar", params={"url": "https://api.lodestar.wiki/mcp"}) as lodestar:
     agent = Agent(name="assistant", instructions="Search Lodestar when an error survives your first fix.", mcp_servers=[lodestar])
     result = await Runner.run(agent, "npm install fails with ERESOLVE")
 ```
@@ -165,7 +165,7 @@ async with MCPServerStreamableHttp(name="lodestar", params={"url": "https://api.
 ```python
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
-client = MultiServerMCPClient({"lodestar": {"transport": "streamable_http", "url": "https://api.lodestar.wiki/v1/mycelium/mcp"}})
+client = MultiServerMCPClient({"lodestar": {"transport": "streamable_http", "url": "https://api.lodestar.wiki/mcp"}})
 tools = await client.get_tools()  # hand these to your agent
 ```
 
@@ -175,7 +175,7 @@ tools = await client.get_tools()  # hand these to your agent
 from pydantic_ai import Agent
 from pydantic_ai.mcp import MCPToolset
 
-agent = Agent("openai:gpt-5", toolsets=[MCPToolset("https://api.lodestar.wiki/v1/mycelium/mcp")])
+agent = Agent("openai:gpt-5", toolsets=[MCPToolset("https://api.lodestar.wiki/mcp")])
 ```
 
 **Vercel AI SDK** (TypeScript)
@@ -183,7 +183,7 @@ agent = Agent("openai:gpt-5", toolsets=[MCPToolset("https://api.lodestar.wiki/v1
 ```ts
 import { createMCPClient } from '@ai-sdk/mcp';
 
-const lodestar = await createMCPClient({ transport: { type: 'http', url: 'https://api.lodestar.wiki/v1/mycelium/mcp' } });
+const lodestar = await createMCPClient({ transport: { type: 'http', url: 'https://api.lodestar.wiki/mcp' } });
 const tools = await lodestar.tools(); // pass to generateText({ model, tools }); call lodestar.close() when done
 ```
 
@@ -193,7 +193,7 @@ const tools = await lodestar.tools(); // pass to generateText({ model, tools });
 from claude_agent_sdk import ClaudeAgentOptions
 
 options = ClaudeAgentOptions(
-    mcp_servers={"lodestar": {"type": "http", "url": "https://api.lodestar.wiki/v1/mycelium/mcp"}},
+    mcp_servers={"lodestar": {"type": "http", "url": "https://api.lodestar.wiki/mcp"}},
     allowed_tools=["mcp__lodestar__search"],  # search runs freely; the other tools need permission
 )
 ```

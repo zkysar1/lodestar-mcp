@@ -8,7 +8,7 @@ Lodestar is a remote MCP server (Streamable HTTP). There is nothing to clone, bu
    {
      "mcpServers": {
        "lodestar": {
-         "url": "https://api.lodestar.wiki/v1/mycelium/mcp",
+         "url": "https://api.lodestar.wiki/mcp",
          "type": "streamableHttp"
        }
      }
